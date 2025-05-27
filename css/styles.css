@@ -32,7 +32,6 @@ h4 {
   font-family: var(--primary-font);
 }
 
-
 /* Containers */
 .container {
   max-width: 1200px;
@@ -76,11 +75,8 @@ h4 {
   color: var(--accent-color);
 }
 
-/* ADDITIONAL */
-
+/* Additional Navbar flex control */
 .navbar .container {
-  display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 
@@ -109,7 +105,7 @@ h4 {
   transform: scale(1.2);
 }
 
-/* Hero */
+/* Hero Section */
 .hero {
   height: 80vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
@@ -159,7 +155,7 @@ h4 {
   border-color: var(--accent-color);
 }
 
-/* About */
+/* About Section */
 .about-section {
   display: flex;
   padding: 5rem 10%;
@@ -297,17 +293,17 @@ h4 {
 }
 
 /* Contact Page */
+main.container h2,
+main.container h3 {
+  color: var(--accent-color) !important;
+}
+
 .left-side,
 .right-side {
   width: 48%;
   margin: 60px 0 100px 0;
 }
 
-.left-side h2,
-.left-side h3,
-.right-side h2 {
-  color: var(--accent-color);
-}
 
 .map-container {
   width: 100%;
@@ -396,12 +392,11 @@ footer {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Hide the nav-toggle checkbox */
+/* Hamburger menu styling */
 .nav-toggle {
   display: none;
 }
 
-/* Hamburger menu styling */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -419,6 +414,7 @@ footer {
   transition: all 0.3s ease;
 }
 
+/* Responsive styles */
 @media (max-width: 430px) {
   /* Show hamburger toggle checkbox */
   .nav-toggle {
@@ -444,20 +440,11 @@ footer {
   /* Hamburger icon lines */
   .hamburger {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     width: 30px;
     height: 25px;
     margin: 0 2rem;
     cursor: pointer;
     z-index: 4;
-  }
-
-  .hamburger span {
-    height: 4px;
-    background: var(--text-color);
-    border-radius: 2px;
-    transition: all 0.3s ease;
   }
 
   /* Hamburger to X transformation */
@@ -475,7 +462,7 @@ footer {
     transform-origin: center;
   }
 
-  /* Hidden nav links (animated) */
+  /* Mobile nav links */
   .nav-links {
     flex-direction: column;
     position: absolute;
@@ -499,9 +486,8 @@ footer {
     pointer-events: auto;
   }
 
-  /* Nav links style */
   .nav-links li {
-    margin: 0.25rem 0;
+    margin: auto;
     text-align: center;
   }
 
@@ -512,8 +498,9 @@ footer {
     transition: color 0.3s ease;
   }
 
-  .nav-links a:hover {
-    color: var(--accent-color);
+  .nav-links li a:active,
+  .nav-links li a:focus {
+    color: var(--primary-color);
   }
 
   /* About Section stacking */
@@ -553,6 +540,40 @@ footer {
     max-width: none;
   }
 
+  /* Menu Section */
+  .menu-row,
+  .menu-row.reverse {
+    flex-direction: column;
+    text-align: center;
+    padding: 0.5rem 1rem;
+  }
+
+  .menu-img-flex {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .menu-text {
+    padding: 0 1rem;
+  }
+
+  .menu-title {
+    font-size: 2.5rem;
+  }
+
+  .menu-section {
+    margin-bottom: 150px;
+  }
+
+  /* Contact Section */
+  .left-side,
+  .right-side {
+    width: 100%;
+    margin: 40px 0;
+  }
+
   /* Footer stacked */
   footer {
     padding: 3rem 1rem 1rem;
@@ -579,4 +600,3 @@ footer {
     color: var(--primary-color);
   }
 }
-
