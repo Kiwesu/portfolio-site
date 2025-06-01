@@ -109,7 +109,7 @@ h4 {
 .hero {
   height: 80vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("/image/heroimg_1920px.webp") center/cover no-repeat;
+    url("/image/fast-coffee-website-moorabbin_1920px.webp") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -251,8 +251,16 @@ h4 {
 
 .menu-subtitle {
   font-size: 2rem;
-  margin: 3rem 0 1.5rem;
+  margin: 3rem 1.5rem;
+  text-align: center;
 }
+
+.menu-subtitle + p {
+  text-align: center;
+  margin: 0 2rem;
+  padding-bottom: 8rem;
+}
+
 
 .menu-flex {
   display: flex;
