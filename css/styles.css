@@ -377,6 +377,21 @@ footer {
   font-size: 1.3rem;
 }
 
+.footer-section ul {
+  list-style: none;       
+  padding-left: 0;         
+}
+
+.footer-section ul li a {
+  color: white;            
+  text-decoration: none;   
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline; 
+}
+
+
 .social-links {
   display: flex;
   gap: 1rem;
